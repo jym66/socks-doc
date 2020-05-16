@@ -64,7 +64,7 @@ VER （版本）字段在此版本中设置为 X’05‘ ， NMETHODS （方法�
 
 SOCKS 请求为如下格式：
 
-<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="614" height="117" >
+<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="194" height="117" >
 
 字段含义：
 - VER　协议版本： X‘05’
