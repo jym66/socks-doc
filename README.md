@@ -27,7 +27,7 @@ SOCKS 协议第 4 版本为基于 TCP 协议的 C/S 应用，包括 TELNET, FTP 
 当 TCP 客户端想要建立必须透过防火墙（取决于具体的情况）的连接时，客户端必须与合适的 SOCKS 服务建立连接。SOCKS 服务默认监听 1080 端口，如果连接成功，客户端需要与服务端协商认证方式并完成认证，之后便可以发送中继请求。SOCKS 服务端会执行请求，要么建立起合适的连接，要么拒绝请求。
 
 客户端连接到 SOCKS 服务端，发送的协议版本与认证方法数据包格式：
-<img src="1.png" alt="logo" width="140" height="140" align="right">
+<img src="https://github.com/jym66/socks-doc/blob/master/1.png" alt="logo" width="140" height="140" align="right">
 
 
 | 版本   | 方法数目	 | 方法列表   |
@@ -36,7 +36,7 @@ SOCKS 协议第 4 版本为基于 TCP 协议的 C/S 应用，包括 TELNET, FTP 
 VER （版本）字段在此版本中设置为 X’05‘ ， NMETHODS （方法数目）字段包含了 METHODS （方法列表）中所包含的方法识别码的个数。
 
 服务端要从给定的方法列表中选择一个方法并返回选择报文：
-<img src="2.png" alt="logo" width="140" height="140" align="right">
+<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="140" height="140" align="right">
 
 |  版本   | 方法  |
 |  ----  | ----     |
@@ -61,7 +61,7 @@ VER （版本）字段在此版本中设置为 X’05‘ ， NMETHODS （方法�
 
 SOCKS 请求为如下格式：
 
-<img src="3.png" alt="logo" width="614" height="117" >
+<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="614" height="117" >
 
 字段含义：
 - VER　协议版本： X‘05’
@@ -91,7 +91,7 @@ SOCKS 服务端会根据请求类型和源、目标地址，执行对应操作�
 
 客户端与服务端建立连接并完成认证之后就会发送请求信息，服务端执行对应请求并返回如下格式的报文：
 
-<img src="4.png" alt="logo" width="613" height="118">
+<img src="https://github.com/jym66/socks-doc/blob/master/4.png" alt="logo" width="613" height="118">
 字段细节:
 
 ```
