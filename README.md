@@ -186,8 +186,20 @@ FRAG 字段表明了一个报文是否是一系列报文中的一个。如果有
 ## 8、安全注意事项
 
 本文档描述的是一个辅助应用层协议穿透 IP 网络防火墙的协议。此种方式的安全性高度依赖于客户端与服务端协商后选定的认证方法，以及该方法的具体实现中，所采用的认证方式和数据封装方式。
-
 管理员应当仔细考虑选择哪种认证方式。
+
+## 9、参考资料
+[1] Koblas, D., "SOCKS", Proceedings: 1992 Usenix Security Symposium.
+```
+Author’s Address
+    Marcus Leech
+    Bell-Northern Research Ltd
+    P.O. Box 3511, Stn. C,
+    Ottawa, ON
+    CANADA K1Y 4H7
+    Phone: (613) 763-9145
+    EMail: mleech@bnr.ca
+```
 --
 ##### [转载自 RFC 1928 - SOCKS 5 协议中文文档「译」](https://www.quarkay.com/code/383/socks5-protocol-rfc-chinese-traslation)
 
