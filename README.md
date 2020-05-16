@@ -37,7 +37,7 @@ SOCKS 协议第 4 版本为基于 TCP 协议的 C/S 应用，包括 TELNET, FTP 
 
 VER （版本）字段在此版本中设置为 X’05‘ ， NMETHODS （方法数目）字段包含了 METHODS （方法列表）中所包含的方法识别码的个数。
 服务端要从给定的方法列表中选择一个方法并返回选择报文：
-<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="140" height="140" align="right">
+<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="140" height="140">
 
 |  版本   | 方法  |
 |  ----  | ----     |
