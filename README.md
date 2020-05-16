@@ -29,7 +29,7 @@ SOCKS 协议第 4 版本为基于 TCP 协议的 C/S 应用，包括 TELNET, FTP 
 客户端连接到 SOCKS 服务端，发送的协议版本与认证方法数据包格式：
 
 
-<img src="https://github.com/jym66/socks-doc/blob/master/1.png" alt="logo" width="140" height="140">
+<img src="https://github.com/jym66/socks-doc/blob/master/1.png" alt="logo" width="359" height="120">
 
 
 | 版本   | 方法数目	 | 方法列表   |
@@ -39,7 +39,7 @@ SOCKS 协议第 4 版本为基于 TCP 协议的 C/S 应用，包括 TELNET, FTP 
 
 VER （版本）字段在此版本中设置为 X’05‘ ， NMETHODS （方法数目）字段包含了 METHODS （方法列表）中所包含的方法识别码的个数。服务端要从给定的方法列表中选择一个方法并返回选择报文：
 
-<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="140" height="140">
+<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="194" height="117">
 
 |  版本   | 方法  |
 |  ----  | ----     |
@@ -64,7 +64,7 @@ VER （版本）字段在此版本中设置为 X’05‘ ， NMETHODS （方法�
 
 SOCKS 请求为如下格式：
 
-<img src="https://github.com/jym66/socks-doc/blob/master/2.png" alt="logo" width="194" height="117" >
+<img src="https://github.com/jym66/socks-doc/blob/master/3.png" alt="logo" width="614" height="117" >
 
 字段含义：
 - VER　协议版本： X‘05’
@@ -147,7 +147,7 @@ UDP 关联的回复报文中， BND.PORT 和 BND.ADDR 包含了客户端发送�
 
 ## 7、基于 UDP 的客户端处理过程
 基于 UDP 的客户端应当把 UDP 报文发送到 UDP 关联回复报文所指定的中继服务地址和端口。如果前面协商选择的方法为了完整性、认证和可信性的校验支持数据封装，则数据应当使用对应的方法进行封装。每个 UDP 报文都携带一个如下格式的请求头：
-<img src="5.png" alt="logo" width="613" height="118">
+<img src="https://github.com/jym66/socks-doc/blob/master/4.png" alt="logo" width="665" height="117">
 ```
 RSV　保留字段，应当置为 X‘0000’
 FRAG　当前帧序号
