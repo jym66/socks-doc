@@ -66,6 +66,10 @@ SOCKS 请求为如下格式：
 
 <img src="https://github.com/jym66/socks-doc/blob/master/3.png" alt="logo" width="614" height="117" >
 
+|  版本   | 命令     |   保留字段	 |  地址类型	  | 目标地址	|目标端口|
+|  ----  | ----     |  ----  | ----  |  ----  | ----          |
+| 1      | 1        | X‘00’	 |     1    |   Variable | 2      
+
 字段含义：
 - VER　协议版本： X‘05’
 - CMD　命令
@@ -96,6 +100,10 @@ SOCKS 服务端会根据请求类型和源、目标地址，执行对应操作�
 
 <img src="https://github.com/jym66/socks-doc/blob/master/4.png" alt="logo" width="613" height="118">
 字段细节:
+
+|  版本   | 回复（类型）     |   保留字段	 |  地址类型	  | 地址	|目标端口|
+|  ----  | ----     |  ----  | ----  |  ----  | ----          |
+| 1      | 1        | X‘00’	 |     1    |   Variable | 2      
 
 ```
 VER协议版本：　X‘05’
@@ -148,6 +156,11 @@ UDP 关联的回复报文中， BND.PORT 和 BND.ADDR 包含了客户端发送�
 ## 7、基于 UDP 的客户端处理过程
 基于 UDP 的客户端应当把 UDP 报文发送到 UDP 关联回复报文所指定的中继服务地址和端口。如果前面协商选择的方法为了完整性、认证和可信性的校验支持数据封装，则数据应当使用对应的方法进行封装。每个 UDP 报文都携带一个如下格式的请求头：
 <img src="https://github.com/jym66/socks-doc/blob/master/4.png" alt="logo" width="665" height="117">
+
+|  保留字段|  帧序号  | 地址类型   |目的地址      | 目的端 |数据  |
+|  ----   | ----    | ----       |----         | ----  | ---- |
+| 2       | 1       | 1	         | Variable    |   2   | Variable  |
+
 ```
 RSV　保留字段，应当置为 X‘0000’
 FRAG　当前帧序号
